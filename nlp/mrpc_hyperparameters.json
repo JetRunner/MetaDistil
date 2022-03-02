@@ -1,0 +1,17 @@
+{
+  "seed": [42, 2022, 12],
+  "max_seq_length": [128],
+  "per_gpu_train_batch_size": [4,8],
+  "per_gpu_eval_batch_size": [8],
+  "gradient_accumulation_steps": [1],
+  "num_train_epochs": [4,6,8],
+  "learning_rate": [2e-5, 1e-5],
+  "evaluate_during_training": ["True"],
+  "logging_steps": [50],
+  "save_steps": [50],
+  "model_type": ["bert"],
+  "model_name_or_path": ["bert-base-uncased"],
+  "task_name": ["MRPC"],
+  "data_dir": ["glue_data/MRPC"],
+  "warmup_steps": [100,150]
+}
