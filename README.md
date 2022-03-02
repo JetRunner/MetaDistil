@@ -12,4 +12,4 @@ The implementation of text classification is based on https://github.com/bzantiu
 Shout out to the authors of these two repos.
 
 ## How to use the code
-To be added.
+To be added. For now, please see `/nlp/run_glue_distillation_meta.py` and `/cv/train_student_meta.py`.
