@@ -214,13 +214,14 @@ def main():
         if epoch == 150:
             for param_group in t_optimizer.param_groups:
                 param_group['lr'] = opt.teacher_lr
+                opt.assume_s_step_size *= opt.lr_decay_rate
         if epoch == 180:
             for param_group in t_optimizer.param_groups:
-                param_group['lr'] *= opt.teacher_lr
+                param_group['lr'] *= opt.lr_decay_rate
             opt.assume_s_step_size *= opt.lr_decay_rate
         if epoch == 210:
             for param_group in t_optimizer.param_groups:
-                param_group['lr'] *= opt.teacher_lr
+                param_group['lr'] *= opt.lr_decay_rate
             opt.assume_s_step_size *= opt.lr_decay_rate
         adjust_learning_rate(epoch, opt, s_optimizer)
         # adjust_learning_rate(epoch, opt, t_optimizer)
